@@ -15,6 +15,7 @@
 		70A288271D6A9E22005FF7DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70A288251D6A9E22005FF7DE /* LaunchScreen.storyboard */; };
 		70A288321D6A9E22005FF7DE /* PZXAlertViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A288311D6A9E22005FF7DE /* PZXAlertViewTests.m */; };
 		70A2883D1D6A9E22005FF7DE /* PZXAlertViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A2883C1D6A9E22005FF7DE /* PZXAlertViewUITests.m */; };
+		70A2884D1D6A9F5A005FF7DE /* PZXAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A2884C1D6A9F5A005FF7DE /* PZXAlertView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		70A288381D6A9E22005FF7DE /* PZXAlertViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PZXAlertViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70A2883C1D6A9E22005FF7DE /* PZXAlertViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZXAlertViewUITests.m; sourceTree = "<group>"; };
 		70A2883E1D6A9E22005FF7DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70A2884B1D6A9F5A005FF7DE /* PZXAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PZXAlertView.h; sourceTree = "<group>"; };
+		70A2884C1D6A9F5A005FF7DE /* PZXAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PZXAlertView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 		70A288161D6A9E22005FF7DE /* PZXAlertView */ = {
 			isa = PBXGroup;
 			children = (
+				70A2884A1D6A9E3D005FF7DE /* PZXalertView */,
 				70A2881A1D6A9E22005FF7DE /* AppDelegate.h */,
 				70A2881B1D6A9E22005FF7DE /* AppDelegate.m */,
 				70A2881D1D6A9E22005FF7DE /* ViewController.h */,
@@ -138,6 +142,15 @@
 				70A2883E1D6A9E22005FF7DE /* Info.plist */,
 			);
 			path = PZXAlertViewUITests;
+			sourceTree = "<group>";
+		};
+		70A2884A1D6A9E3D005FF7DE /* PZXalertView */ = {
+			isa = PBXGroup;
+			children = (
+				70A2884B1D6A9F5A005FF7DE /* PZXAlertView.h */,
+				70A2884C1D6A9F5A005FF7DE /* PZXAlertView.m */,
+			);
+			path = PZXalertView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +285,7 @@
 			files = (
 				70A2881F1D6A9E22005FF7DE /* ViewController.m in Sources */,
 				70A2881C1D6A9E22005FF7DE /* AppDelegate.m in Sources */,
+				70A2884D1D6A9F5A005FF7DE /* PZXAlertView.m in Sources */,
 				70A288191D6A9E22005FF7DE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
