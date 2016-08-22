@@ -101,8 +101,8 @@
     
     if (!_backView) {//创建背景view
         _backView = [UIView new];
-        _backView.backgroundColor = [UIColor whiteColor];
-        _backView.layer.cornerRadius = 5.0f;
+        _backView.backgroundColor = [UIColor whiteColor];//背景view的颜色
+        _backView.layer.cornerRadius = 8.0f;
         _backView.layer.masksToBounds = YES;
         [_alertWindow addSubview:_backView];
     }
@@ -204,6 +204,7 @@
         
         _alertWindow.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:.0];
         _backView.transform = CGAffineTransformMakeScale(0.2, 0.2);
+        
     } completion:^(BOOL finished) {
         if (_backView) {
             [_backView removeFromSuperview];
