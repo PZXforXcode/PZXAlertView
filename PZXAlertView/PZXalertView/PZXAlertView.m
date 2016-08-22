@@ -8,7 +8,7 @@
 #define MESSAGELEADING 15.0f
 #define TITLEFONT [UIFont boldSystemFontOfSize:17]
 #define MESSAGEFONT [UIFont systemFontOfSize:15]
-
+#define BUTTONCOLOR [UIColor cyanColor]
 #define BUTTONHEIGHT 45.0f
 
 #import "PZXAlertView.h"
@@ -157,7 +157,7 @@
                 UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(buttonWith*i-1,leadingY,  buttonWith, BUTTONHEIGHT)];
                 NSString *title = [NSString stringWithFormat:@"%@",_buttons[i]];
                 [button setTitle:title forState:UIControlStateNormal];
-                [button setTitleColor:[UIColor cyanColor] forState:UIControlStateNormal];
+                [button setTitleColor:BUTTONCOLOR forState:UIControlStateNormal];
                 button.layer.borderColor = [UIColor groupTableViewBackgroundColor].CGColor;
                 button.layer.borderWidth = .5f;
                 [_backView addSubview:button];
@@ -170,7 +170,7 @@
                 UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(-1, leadingY+i*BUTTONHEIGHT, _width+2, BUTTONHEIGHT)];
                 NSString *title = [NSString stringWithFormat:@"%@",_buttons[i]];
                 [button setTitle:title forState:UIControlStateNormal];
-                [button setTitleColor:[UIColor cyanColor] forState:UIControlStateNormal];
+                [button setTitleColor:BUTTONCOLOR forState:UIControlStateNormal];
                 button.layer.borderColor = [UIColor groupTableViewBackgroundColor].CGColor;
                 button.layer.borderWidth = .5f;
                 button.titleLabel.font = [UIFont boldSystemFontOfSize:17];
