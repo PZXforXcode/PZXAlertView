@@ -35,7 +35,7 @@
 
     PZXWindow *_alertWindow;
     UIView *_backView;
-    UIScrollView *_scrollView;
+    UIScrollView *_scrollView;//暂时用不到 如果以后要做滑动效果再用
     UILabel *_messageLabel;
     UILabel *_titleLabel;
     
@@ -59,8 +59,12 @@
 
 +(instancetype)showWithTitle:(NSString *)title message:(NSString *)message actionButtons:(NSArray *)buttons clickedCompletion:(PZXAlertClickedAtIndex)completed{
     //在有window 处于levelAlert 的时候阻止弹出
+    for (id object in [UIApplication sharedApplication].windows) {
+        if ([object isKindOfClass:[PZXWindow class]]) {
+            return nil;//防止出现两个pzxwindow
+        }
+    }
     return [[PZXAlertView alloc]initWithTitle:title message:message actionButtons:buttons clickedCompletion:completed];
-
 
 }
 - (instancetype)initWithTitle:(NSString *)title message:(NSString *)message actionButtons:(NSArray *)buttons clickedCompletion:(PZXAlertClickedAtIndex)completed{
