@@ -10,6 +10,9 @@
 #define MESSAGEFONT [UIFont systemFontOfSize:15]
 #define BUTTONCOLOR [UIColor cyanColor]
 #define BUTTONHEIGHT 45.0f
+#define BackGroundColor [UIColor whiteColor]
+#define TITLELABELCOLOR [UIColor blackColor]
+#define MESSAGECOLOR [UIColor blackColor]
 
 #import "PZXAlertView.h"
 
@@ -105,7 +108,7 @@
     
     if (!_backView) {//创建背景view
         _backView = [UIView new];
-        _backView.backgroundColor = [UIColor whiteColor];//背景view的颜色
+        _backView.backgroundColor = BackGroundColor;//背景view的颜色
         _backView.layer.cornerRadius = 8.0f;
         _backView.layer.masksToBounds = YES;
         [_alertWindow addSubview:_backView];
@@ -121,6 +124,8 @@
             _titleLabel.text = _title;
             _titleLabel.numberOfLines = 0;
             //_titleLabel.backgroundColor = [UIColor redColor];
+            _titleLabel.textColor = TITLELABELCOLOR;
+
             _titleLabel.textAlignment = NSTextAlignmentCenter;
             [_backView addSubview:_titleLabel];
             _titleLabel.center = CGPointMake(_width/2, _titleLabel.center.y);
@@ -135,6 +140,8 @@
             _messageLabel.font = MESSAGEFONT;
             _messageLabel.text = _message;
             _messageLabel.numberOfLines = 0;
+            _messageLabel.textColor = MESSAGECOLOR;
+
             //_messageLabel.textAlignment = NSTextAlignmentCenter;
             [_backView addSubview:_messageLabel];
             _messageLabel.center = CGPointMake(_width/2, _messageLabel.center.y);
